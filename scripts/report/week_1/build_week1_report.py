@@ -5,6 +5,7 @@
 실행: python scripts/report/week_1/build_week1_report.py
 """
 import csv
+import tempfile
 from pathlib import Path
 
 from PIL import Image as PILImage
@@ -52,8 +53,7 @@ def table(rows, widths, header=True, style=SMALL):
     return t
 
 
-TMP = HERE / ".pdf_images"  # PDF에 넣을 축소본 (git에 안 올림)
-TMP.mkdir(exist_ok=True)
+TMP = Path(tempfile.mkdtemp(prefix="week1_report_"))  # PDF에 넣을 축소본. 시스템 임시 폴더라 프로젝트에 남지 않음
 
 
 def img(path, max_w, max_h, max_px=1400):
@@ -191,12 +191,8 @@ t.setStyle(TableStyle([("GRID", (0, 0), (-1, -1), 0.4, colors.grey),
 story.append(t)
 
 
-def footer(canvas, doc):
-    canvas.setFont("KR", 8)
-    canvas.drawRightString(A4[0] - 2 * cm, 1.2 * cm, f"신재윤 20118701 · {doc.page}")
-
 
 SimpleDocTemplate(str(OUT), pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm,
                   topMargin=1.8 * cm, bottomMargin=1.8 * cm,
-                  title="Step 3 1주차 실습 보고서", author="신재윤").build(story, onFirstPage=footer, onLaterPages=footer)
+                  title="Step 3 1주차 실습 보고서", author="신재윤").build(story)
 print("저장:", OUT)

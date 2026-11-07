@@ -25,10 +25,10 @@ flowchart TD
     end
     subgraph B["build_week1_report.py (모듈 전체가 순서대로 실행)"]
         A["①② 표·문단<br/>table(), P(), bullets()"]
-        C["③ img()로 그림 크기 맞춤<br/>KeepTogether로 제목과 묶음"]
+        C["③ img()로 그림을 축소 JPEG로 바꿔 넣음<br/>(임시 폴더, PDF 크기 때문)"]
         D["④ CSV 행마다 img() + 설명 칸"]
         E["⑤ 기준서 문단·표<br/>+ CSV 행마다 예시 칸"]
-        F["SimpleDocTemplate.build()<br/>footer()로 쪽마다 이름·학번·쪽수"]
+        F["SimpleDocTemplate.build()"]
         A --> C --> D --> E --> F
     end
     S9 --> C
