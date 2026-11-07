@@ -1,0 +1,10 @@
+path: C:/Users/rlady/Desktop/222/yolo_seg_3_clean_v4_2
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: crack
+  1: efflorescence
+  2: spall_detach

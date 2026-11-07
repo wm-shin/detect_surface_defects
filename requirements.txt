@@ -1,0 +1,8 @@
+# 강의 1주차 12쪽의 설치 목록 + 실습 코드가 쓰는 패키지.
+# 새 기기: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+# (또는 conda env 안에서 pip install -r requirements.txt)
+ultralytics      # YOLOv8s-Seg 학습·평가. torch, numpy, pandas, pillow를 같이 설치함
+pyyaml           # data.yaml 읽기·쓰기 (2주차 분할 코드, check_data.py). ultralytics 8.4는 같이 설치하지 않음
+opencv-python    # 영상 읽기·저장 (1주차 영상 관찰, 3주차 오류 사례 저장)
+matplotlib       # 샘플 그림, 학습 곡선, 임계값 F1 곡선
+pypdf            # lecture_materials/ PDF 본문 읽기용 (실습 코드에는 안 씀)

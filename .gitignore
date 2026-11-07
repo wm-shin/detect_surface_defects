@@ -1,0 +1,14 @@
+# 데이터: 3.4 GB라 git에 올리지 않는다. data.yaml만 올린다. 받는 법은 CLAUDE.md.
+data/*
+!data/data.yaml
+
+# 가중치·학습 결과 (사전학습 가중치는 각 기기에서 자동 다운로드, best.pt는 따로 옮김)
+*.pt
+runs/
+
+# 파이썬·노트북·IDE 찌꺼기
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+.claude/settings.local.json
