@@ -7,6 +7,7 @@ data/*
 runs/
 
 # 파이썬·노트북·IDE 찌꺼기
+.vscode/
 __pycache__/
 .ipynb_checkpoints/
 .venv/
