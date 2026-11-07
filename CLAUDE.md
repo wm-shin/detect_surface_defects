@@ -15,8 +15,8 @@
   - `Step3_3주차_강의와실습.pdf`: mask mAP, 이미지 단위 ON/OFF 평가, 검증셋 임계값 탐색, 오류 분석, 리포트.
   - 본문은 `pypdf`로 텍스트를 뽑아 읽는다(`python3 -c "from pypdf import PdfReader; ..."`). 그림만 있는 슬라이드는 텍스트가 거의 없다.
 - `data/` — 논문 최종 데이터셋(YOLO seg 포맷, train/val/test 분할 완료)과 `data.yaml`. 3.4 GB라 `data.yaml`만 git에 있다. 새 기기에서는 구글 드라이브에서 받은 뒤 `docs/excluded_train_files.csv`대로 지우고(명령은 `docs/decisions.md` 데이터 절) `scripts/check_data.py`로 점검한다.
-- `scripts/` — 주차별 실습 노트북(`week_1.ipynb` 등)과 스크립트(`check_data.py`). `scripts/mermaid/`에 스크립트별 구조 그림, `scripts/report/`에 제출물. 노트북은 `scripts/`가 작업 폴더라 데이터 경로는 `../data/...`.
-- `docs/decisions.md` — 결정 기록. 아래 규칙대로 쓴다. `docs/excluded_train_files.csv`는 train에서 뺀 파일 목록.
+- `scripts/` — 주차별 실습 노트북(`week_1.ipynb` 등)과 스크립트(`check_data.py`). `scripts/mermaid/`에 스크립트별 구조 그림, `scripts/report/week_N/`에 주차별 제출물(리포트 생성 `build_weekN_report.py`, 산출물 `component/`). 노트북은 `scripts/`가 작업 폴더라 데이터 경로는 `../data/...`.
+- `docs/decisions.md` — 결정 기록. 아래 규칙대로 쓴다. `docs/excluded_train_files.csv`는 train에서 뺀 파일 목록, `docs/figures/`는 결정의 근거 그림(리포트에 씀).
 - `requirements.txt` — 설치 목록. 환경은 conda `env1`.
 
 ## 강의 자료와 결정 기록

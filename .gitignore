@@ -12,3 +12,6 @@ __pycache__/
 .venv/
 .DS_Store
 .claude/settings.local.json
+
+# 리포트 PDF용 축소 그림 (build_weekN_report.py가 만듦)
+scripts/report/**/.pdf_images/

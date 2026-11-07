@@ -54,12 +54,12 @@ flowchart TD
 ```mermaid
 flowchart LR
     S["URT017_..._24512_jpg.rf.c2fd…<br/>URT002_..._1636_aug_1_00064_augfill_…"] --> A["Roboflow 꼬리 떼기<br/>_jpg.rf.해시"]
-    A --> B["증강 꼬리 떼기<br/>_aug 부터 끝까지"]
+    A --> B["증강 꼬리 떼기<br/>_aug 또는 _efflo_ 부터 끝까지"]
     B --> O["URT017_..._24512<br/>URT002_..._1636"]
 ```
 
 - Roboflow 꼬리는 val·test의 일부 원본에만 붙어 있다.
-- 증강 꼬리는 `_aug_…`와 `_augfill_…` 두 종류인데 둘 다 `_aug`로 시작해서 한 번에 떼진다(강의 2주차 12쪽 `stem.split("_aug")[0]`).
+- 증강 꼬리는 세 종류다. `_aug_…`와 `_augfill_…`는 둘 다 `_aug`로 시작하고(강의 2주차 12쪽 `stem.split("_aug")[0]`), 그 밖에 `_efflo_bright`·`_efflo_contrast`·`_efflo_hflip`이 5개 원본에 15장 있다. 그래서 `_aug` 또는 `_efflo_`가 처음 나오는 곳에서 자른다(`AUG_SUFFIX`). `is_augmented`도 같은 패턴을 쓴다.
 
 ## 출력 예 (2026-11-07, 재다운로드 후 정리 전)
 
@@ -86,7 +86,7 @@ flowchart LR
 [test] 영상 40장, 라벨 40개, 인스턴스 crack 14 / efflorescence 19 / spall_detach 14, 해상도 1920x1080 40장
 
 ⑥ 원본 단위 분할 — 같은 사진에서 나온 영상(원본 + 증강본)은 한 split에만 있어야 한다
-  원본 ID 수: train 135 · val 40 · test 40
+  원본 ID 수: train 135 · val 40 · test 40   (← _efflo_ 규칙을 넣기 전 값. 지금은 정리 후 119)
   ✗ 여러 split에 걸친 원본 ID: 1개
       뜻: 같은 사진에서 나온 영상이 두 split에 같이 있다. ... (데이터 누수)
       조치: 한쪽 split에서 그 원본의 파일을 모두 뺀다. 테스트셋은 고정하는 것이 원칙이므로 보통 train 쪽을 뺀다.

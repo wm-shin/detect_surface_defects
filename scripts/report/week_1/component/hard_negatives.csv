@@ -1,0 +1,11 @@
+file,kind,confused_with,description,split,image,crop_x0,crop_y0,crop_x1,crop_y1
+hard_negatives/hn_01.png,시공 이음부,crack,수평으로 곧게 이어지고 폭이 일정한 시공 이음부라 긴 균열처럼 보인다.,train,URT002_2021_03_05_001_15100.jpg,200,280,1700,620
+hard_negatives/hn_02.png,시공 이음부,crack,벽면을 세로로 가르는 어두운 홈(이음 줄눈)이 폭 넓은 균열처럼 보인다.,train,URT010_2022_03_05_001_24486.jpg,850,250,1450,1080
+hard_negatives/hn_03.png,케이블·배관,crack,벽에 붙어 세로로 내려오는 가는 전선이 어두운 선형 균열과 거의 같은 모습이다.,train,URT017_2020_01_14_002_3336.jpg,100,0,800,1080
+hard_negatives/hn_04.png,케이블·배관,crack,벽면을 가로지르는 가는 강선 여러 줄이 분기형 균열처럼 보인다.,train,URT007_2022_01_03_001_13166.jpg,650,250,1920,1080
+hard_negatives/hn_05.png,그림자,crack,케이블이 만든 띠 모양 그림자가 어둡고 길어 큰 균열처럼 보인다.,train,URT007_2022_01_03_001_13166.jpg,950,0,1920,450
+hard_negatives/hn_06.png,그림자,crack,수직 지지대 옆의 짙은 세로 그림자가 벌어진 균열처럼 보인다.,train,URT007_2022_01_12_001_29334.jpg,1050,0,1700,800
+hard_negatives/hn_07.png,정반사·조명,efflorescence,조명 등기구의 강한 빛 번짐이 하얗게 넓게 퍼져 백태처럼 보인다.,val,URT003_2021_02_06_091_2478_jpg.rf.ecdfac0f631ccf8ca41447ad97f3609b.jpg,450,0,1400,750
+hard_negatives/hn_08.png,보수 흔적,crack,균열을 덮은 녹회색 보수재 띠가 실제 균열 옆에 나란히 있어 균열로 오인될 수 있다.,train,URT002_2021_03_16_001_7052.jpg,150,0,700,1080
+hard_negatives/hn_09.png,표면 오염,spall_detach,누수·곰팡이로 생긴 검은 얼룩이 표면이 떨어져 나간 어두운 부위처럼 보인다.,train,URT007_2022_01_03_001_1184.jpg,620,0,1600,560
+hard_negatives/hn_10.png,점검 표시(분필),crack,점검자가 그은 흰 분필 선이 가늘고 길어 균열이나 선형 백태처럼 보인다.,train,URT010_2022_02_06_001_23818.jpg,0,350,1600,800

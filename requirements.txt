@@ -6,3 +6,4 @@ pyyaml           # data.yaml 읽기·쓰기 (2주차 분할 코드, check_data.p
 opencv-python    # 영상 읽기·저장 (1주차 영상 관찰, 3주차 오류 사례 저장)
 matplotlib       # 샘플 그림, 학습 곡선, 임계값 F1 곡선
 pypdf            # lecture_materials/ PDF 본문 읽기용 (실습 코드에는 안 씀)
+reportlab        # 주차별 리포트 PDF 만들기 (scripts/report/week_N/build_weekN_report.py)

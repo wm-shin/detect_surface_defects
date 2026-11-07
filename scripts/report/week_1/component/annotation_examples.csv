@@ -1,0 +1,10 @@
+file,cls,description,split,image,crop_x0,crop_y0,crop_x1,crop_y1
+annotation_examples/ae_01.png,crack,가는 균열: 균열선을 가운데 두고 양옆에 여유를 둔 띠로 감싼다. 끊겨 보이는 구간은 따로 인스턴스.,train,URT005_2021_02_05_001_13626.jpg,700,0,1400,1080
+annotation_examples/ae_02.png,crack,보수재(흰 실런트)로 덮인 균열도 crack. 보수재 띠를 따라 칠한다.,train,URT004_2021_02_05_091_19626.jpg,1350,0,1920,1080
+annotation_examples/ae_03.png,crack,균열이 이음부로 이어지면 이음부 구간까지 한 폴리곤에 넣은 사례(일관성 낮음).,train,URT019_2022_03_04_001_12076.jpg,0,450,1920,900
+annotation_examples/ae_04.png,efflorescence,흰 침착물이 보이는 영역의 바깥 경계를 촘촘히 따라간다.,train,URT007_2022_01_01_001_5614.jpg,450,450,1350,1080
+annotation_examples/ae_05.png,efflorescence,흘러내린 줄기까지 포함. 경계는 들쭉날쭉하게 세밀히.,train,URT007_2022_01_12_001_19388.jpg,0,0,1920,600
+annotation_examples/ae_06.png,efflorescence,그림자·케이블이 위를 지나가도 침착물이면 끊지 않고 포함.,train,URT007_2022_01_03_001_11178.jpg,450,550,1920,1080
+annotation_examples/ae_07.png,spall_detach,이음부를 따라 떨어진 부분: 패인 곳과 금이 가 들뜬 주변 조각까지 포함.,train,URT004_2021_03_07_001_14838.jpg,150,250,1920,650
+annotation_examples/ae_08.png,spall_detach,"떨어져 나간 구멍은 하나씩 따로 인스턴스, 구멍 테두리에 약간 여유.",train,URT007_2022_01_09_001_30004.jpg,300,0,1400,1080
+annotation_examples/ae_09.png,spall_detach,넓게 들뜬 판(박리)은 들뜬 판 전체를 한 덩어리로.,train,URT007_2022_01_13_001_32210.jpg,0,0,1700,1000

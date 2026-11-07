@@ -27,20 +27,22 @@ EXPECTED_NAMES = {0: "crack", 1: "efflorescence", 2: "spall_detach"}  # 강의 2
 
 
 # ---- 이 데이터셋 전용: 파일 이름 규칙 -------------------------------------------
+AUG_SUFFIX = re.compile(r"_aug|_efflo_")  # 증강본 이름에 붙는 꼬리의 시작
 def get_origin_id(stem: str) -> str:
     """파일 이름(확장자 제외)에서 원본 ID를 돌려준다.
 
     꼬리 두 종류를 뗀다.
       Roboflow 내보내기: ..._jpg.rf.<해시>        (val·test 일부 원본)
-      증강: ..._aug_<n>_<번호>, ..._augfill_<번호>_<종류>   (train)
+      증강: ..._aug_<n>_<번호>, ..._augfill_<번호>_<종류>, ..._efflo_<bright|contrast|hflip>   (train)
     예) URT002_2021_01_10_001_1636_aug_1_00064_augfill_01382_brightness -> URT002_2021_01_10_001_1636
+        URT007_2022_01_03_001_5324_efflo_hflip -> URT007_2022_01_03_001_5324
     """
     stem = re.sub(r"_jpg\.rf\.[0-9a-f]+$", "", stem)
-    return stem.split("_aug")[0]  # 강의 2주차 12쪽 규칙
+    return AUG_SUFFIX.split(stem, maxsplit=1)[0]  # 강의 2주차 12쪽 split("_aug")에 _efflo_ 추가
 
 
 def is_augmented(stem: str) -> bool:
-    return "_aug" in stem
+    return AUG_SUFFIX.search(stem) is not None
 
 
 # ---- 검사 ------------------------------------------------------------------------
