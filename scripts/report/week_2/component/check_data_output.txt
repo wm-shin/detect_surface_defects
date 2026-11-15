@@ -1,0 +1,16 @@
+=== 데이터 무결성 점검: /Users/mac_mini/projects/detect_surface_defects/data ===
+✗ 가 없는 항목은 통과. 각 ✗ 아래에 뜻과 조치가 있다.
+
+① data.yaml — 학습·평가 때 YOLO에 넘기는 데이터 설정 파일
+
+②~⑤ split별 — 영상·라벨 대응, 라벨 형식, 영상 읽기, 증강 여부
+[train] 영상 3890장, 라벨 3890개, 인스턴스 crack 1044 / efflorescence 1768 / spall_detach 2592, 해상도 1920x1080 3579장 · 1080x1920 311장
+[val] 영상 40장, 라벨 40개, 인스턴스 crack 10 / efflorescence 27 / spall_detach 16, 해상도 1920x1080 40장
+[test] 영상 40장, 라벨 40개, 인스턴스 crack 14 / efflorescence 19 / spall_detach 14, 해상도 1920x1080 40장
+
+⑥ 원본 단위 분할 — 같은 사진에서 나온 영상(원본 + 증강본)은 한 split에만 있어야 한다
+  원본 ID 수: train 119 · val 40 · test 40
+
+⑦ 중복 영상 — 내용이 완전히 같은 사진이 두 장 이상 들어 있는지
+
+결과: 문제 없음

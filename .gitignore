@@ -2,6 +2,9 @@
 data/*
 !data/data.yaml
 
+# 2주차 직접 주석 연습: 영상은 data/에서 복사한 것이라 올리지 않는다. 내보낸 라벨(output/)만 올린다.
+practice_polygon/img/
+
 # 가중치·학습 결과 (사전학습 가중치는 각 기기에서 자동 다운로드, best.pt는 따로 옮김)
 *.pt
 runs/

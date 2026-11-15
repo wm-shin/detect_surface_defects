@@ -1,0 +1,15 @@
+data/images/train/URT001_2021_02_07_001_4320.jpg
+data/images/train/URT002_2021_01_10_001_1636.jpg
+data/images/train/URT003_2021_01_16_001_4468.jpg
+data/images/train/URT004_2021_02_07_091_16696.jpg
+data/images/train/URT005_2021_02_10_001_15956.jpg
+data/images/train/URT006_2022_02_10_001_6510.jpg
+data/images/train/URT007_2022_01_01_001_4742.jpg
+data/images/train/URT007_2022_01_03_001_11206.jpg
+data/images/train/URT007_2022_01_11_001_19176.jpg
+data/images/train/URT007_2022_01_13_001_16032.jpg
+data/images/train/URT007_2022_01_14_001_4826.jpg
+data/images/train/URT008_2022_01_06_001_20464.jpg
+data/images/train/URT010_2022_01_10_001_14286.jpg
+data/images/train/URT017_2020_01_12_001_14392.jpg
+data/images/train/URT017_2020_02_05_001_5519.jpg

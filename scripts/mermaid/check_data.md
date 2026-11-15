@@ -72,7 +72,7 @@ flowchart LR
 ① data.yaml — 학습·평가 때 YOLO에 넘기는 데이터 설정 파일
   ✗ path가 이 폴더를 가리키지 않음: 1개
       뜻: YOLO는 path 아래에서 images/train 등을 찾는다. 지금은 다른 컴퓨터의 경로라 이 기기에서 영상을 못 찾는다.
-      조치: path를 '/Users/shin/project/detect_surface_defects/data' 또는 상대 경로 '.' 로 고친다.
+      조치: path 줄을 지운다. 그러면 ultralytics가 data.yaml이 있는 폴더를 데이터 루트로 쓴다.
       - data.yaml의 path = C:/Users/rlady/Desktop/222/yolo_seg_3_clean_v4_2
 
 ②~⑤ split별 — 영상·라벨 대응, 라벨 형식, 영상 읽기, 증강 여부

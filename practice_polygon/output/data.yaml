@@ -1,0 +1,6 @@
+names:
+  0: crack
+  1: efflorescence
+  2: spall_detach
+path: .
+train: train.txt

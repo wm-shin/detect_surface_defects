@@ -13,7 +13,7 @@
 문제가 하나라도 있으면 종료 코드 1.
 """
 import hashlib
-import re
+import re  # 문자열에서 패턴(정규식)을 찾는 기본 라이브러리. search: 있으면 Match, 없으면 None / split: 패턴 자리에서 자름 / sub: 패턴 부분을 바꿈
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -27,7 +27,7 @@ EXPECTED_NAMES = {0: "crack", 1: "efflorescence", 2: "spall_detach"}  # 강의 2
 
 
 # ---- 이 데이터셋 전용: 파일 이름 규칙 -------------------------------------------
-AUG_SUFFIX = re.compile(r"_aug|_efflo_")  # 증강본 이름에 붙는 꼬리의 시작
+AUG_SUFFIX = re.compile(r"_aug|_efflo_")  # 증강본 이름에 붙는 꼬리의 시작. 패턴 안의 | 는 "또는"
 def get_origin_id(stem: str) -> str:
     """파일 이름(확장자 제외)에서 원본 ID를 돌려준다.
 
@@ -81,7 +81,7 @@ def check_images(img_paths):
             unreadable.append(p.stem)
             continue
         sizes[(im.shape[1], im.shape[0])] += 1
-        hashes[p.stem] = hashlib.md5(p.read_bytes()).hexdigest()
+        hashes[p.stem] = hashlib.md5(p.read_bytes()).hexdigest()  # 파일 내용의 지문. 내용이 완전히 같으면 같은 값이 나온다 → ⑦ 중복 검사에 씀
     return zero, unreadable, sizes, hashes
 
 
@@ -141,7 +141,7 @@ def main():
         if yaml_root != data.resolve():
             rep.problem("path가 이 폴더를 가리키지 않음", [f"data.yaml의 path = {cfg.get('path')}"],
                         "YOLO는 path 아래에서 images/train 등을 찾는다. 지금은 다른 컴퓨터의 경로라 이 기기에서 영상을 못 찾는다.",
-                        f"path를 '{data.resolve()}' 또는 상대 경로 '.' 로 고친다.")
+                        "path 줄을 지운다. 그러면 ultralytics가 data.yaml이 있는 폴더를 데이터 루트로 쓴다.")
         missing = [f"{s}: {cfg[s]}" for s in SPLITS if s in cfg and not (data / cfg[s]).is_dir()]
         rep.problem("split 폴더 없음", missing,
                     "data.yaml에 적힌 train/val/test 폴더가 실제로 없다.",
