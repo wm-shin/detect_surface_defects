@@ -10,9 +10,9 @@
 |---|---|
 | ① | 사전학습 가중치 `yolov8n-seg.pt`를 불러온다 (없으면 자동 다운로드) |
 | ② | 강의 설정으로 학습한다: imgsz 960, batch 4, AdamW, lr0 0.00015, Mosaic·MixUp 끔, patience 20, seed 42, 장치는 맥의 MPS |
-| ③ | 걸린 시간을 분 단위로 출력한다 (3주차 리포트용) |
+| ③ | 걸린 시간을 분 단위로 출력하고 결과 폴더의 `train_time.txt`에 저장한다 (3주차 리포트용) |
 
-같은 이름의 결과 폴더가 이미 있으면 덮어쓰지 않고 `이름-2`, `이름-3`으로 새로 만든다.
+같은 이름의 결과 폴더가 이미 있으면 덮어쓰지 않고 `이름-2`, `이름-3`으로 새로 만든다. `train_time.txt`도 실제로 저장된 그 폴더에 들어간다. 본 학습은 `EPOCHS = 60`, `NAME = "full"`이다.
 
 ## 흐름
 
@@ -23,10 +23,11 @@ flowchart TD
     subgraph M["main()"]
         A["① YOLO() 모델 불러오기"]
         B["② model.train()<br/>강의 2주차 13쪽 설정 + MPS"]
-        C["③ 학습 시간 출력"]
+        C["③ 학습 시간 출력 · 저장"]
         A --> B --> C
     end
     B --> R["runs/&lt;NAME&gt;/<br/>weights/best.pt · last.pt<br/>results.csv · results.png · args.yaml<br/>labels.jpg · train_batch*.jpg · val_batch*.jpg"]
+    C --> T["runs/&lt;NAME&gt;/train_time.txt"]
 ```
 
 ## 출력 예
@@ -37,5 +38,6 @@ flowchart TD
       Epoch    GPU_mem   box_loss   seg_loss   cls_loss   dfl_loss  Instances       Size
         3/3       ...      1.398      2.746      1.547      1.554        ...        960
 ...
-학습시간 : 20.3분
+학습시간 : 20.3분 (설정 3 epochs)
+저장: .../runs/step3_try/train_time.txt
 ```
