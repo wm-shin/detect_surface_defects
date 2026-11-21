@@ -1,0 +1,10 @@
+class,type,image,gt_classes,max_conf
+crack,FN,UCT011_2021_02_12_001_7770_jpg.rf.3b8c7b272fecfca702e16e9af0383b01.jpg,crack,0.0115
+crack,FN,URT005_2021_01_02_001_17812_jpg.rf.73a260d685025aa7030a1eb8351b29a1.jpg,crack,0.0347
+crack,FP,UWT015_2021_01_02_001_17710_jpg.rf.7572a104cdadc04b5de0863fff1bdf11.jpg,efflorescence,0.279
+efflorescence,FP,URT002_2021_01_07_001_23554.jpg,spall_detach,0.2318
+efflorescence,FP,URT007_2022_01_14_001_6432.jpg,spall_detach,0.1438
+efflorescence,FP,URT017_2020_02_08_001_24512_jpg.rf.c2fd9d2931d850bd20aef4922bbe65b0.jpg,spall_detach,0.6176
+spall_detach,FP,URT005_2021_01_02_001_9016_jpg.rf.cc3349867461d0ec12b30c4b2eaf04b3.jpg,crack,0.5134
+spall_detach,FP,URT007_2022_01_13_001_10384_jpg.rf.acb5354688309dd57d457f2b50f9f623.jpg,efflorescence,0.309
+spall_detach,FN,USU013_2022_04_16_005_2734_jpg.rf.af47edd2d0aafdc054c9daae58c2fa3d.jpg,spall_detach,0.1737
